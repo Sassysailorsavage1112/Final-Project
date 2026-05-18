@@ -802,3 +802,8 @@ opacity: 1;
     max-width: 100%;
   }
 }
+
+  .video1, .video2, .video3 {
+    width: 100%; /* Scales perfectly on iPhones and iPads */
+    max-width: 500px; /* Prevents it from getting too large on desktop */
+  }
