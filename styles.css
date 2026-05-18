@@ -782,15 +782,23 @@ opacity: 1;
 }
 
 /* Phones */
-@media (max-width: 600px) {
-  body {
-    background: lightblue;
-  }
-}
+@media (max-width: 768px) {
 
-/* Tablets */
-@media (min-width: 601px) and (max-width: 900px) {
-  body {
-    background: lightgreen;
+  img,
+  video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .about-me__info--para {
+    font-size: 20px;
+    padding: 0 16px;
+  }
+
+  .project__description {
+    left: 20px;
+    right: 20px;
+    max-width: 100%;
   }
 }
