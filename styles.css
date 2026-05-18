@@ -7,8 +7,9 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, span{
-    color: #242424;
+h1, h2, h3, h4, h5, h6, span {
+  color: white;
+
     text-align: center;
     line-height: 1.25;
 }
@@ -116,6 +117,70 @@ transition:all 300ms ease;
 }
 
 /* ABOUT ME */
+
+body {
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+#about-me {
+  position: relative;
+  background: radial-gradient(circle at center, rgba(223, 59, 5, 0.25), black 70%);
+  overflow: hidden;
+}
+
+#about-me::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 50% 80%, rgba(255, 94, 0, 0.45), transparent 35%),
+    radial-gradient(circle at 40% 90%, rgba(255, 0, 0, 0.35), transparent 30%),
+    radial-gradient(circle at 60% 95%, rgba(255, 174, 0, 0.35), transparent 30%);
+  animation: flames 4s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+#about-me > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes flames {
+  0% {
+    transform: translateY(20px) scale(1);
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateY(-20px) scale(1.08);
+    opacity: 1;
+  }
+}
+
+.phoenix-bg {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  max-width: 90%;
+  opacity: 0.35;
+  animation: phoenixRise 6s ease-in-out infinite alternate;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes phoenixRise {
+  0% {
+    transform: translateX(-50%) translateY(40px) scale(0.95);
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-30px) scale(1.05);
+    opacity: 0.45;
+  }
+}
 
 #about-me {
     min-height: 100vh;
